@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Spotify Lyrics RGB",
+    "version": "1.0",
+    "description": "Spotify Lyrics RGB.",
+    "permissions": ["activeTab"],
+    "browser_action": {
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      },
+      "default_title": "Spotify Lyrics RGB"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://open.spotify.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
+  
